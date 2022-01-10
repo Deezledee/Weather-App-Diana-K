@@ -1,0 +1,149 @@
+body {
+  background-color: #f0ece3;
+}
+
+h1 {
+  color: rgba(46, 119, 141, 0.459);
+  display: block;
+  text-align: center;
+  font-family: "Shadows Into Light", cursive;
+  font-size: xx-large;
+  font-weight: bolder;
+}
+
+.form-control {
+  max-width: 300px;
+  display: block;
+  margin: auto;
+  text-align: center;
+}
+
+.btn-success {
+  color: #fff;
+  background-color: #237b9b;
+  margin: 4px 4px 0;
+  border: none;
+  padding: 10px 10px 10px 10px;
+  text-align: center;
+}
+
+.btn-success:hover {
+  background-color: #8bbae3;
+  opacity: 0.9;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.images {
+  align-items: center;
+  margin: auto;
+}
+
+h2 {
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+  color: rgba(46, 119, 141, 0.459);
+  font-family: "Shadows Into Light", cursive;
+  font-size: x-large;
+  font-weight: bold;
+}
+
+form {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
+
+p {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  font-size: large;
+  font-family: "Shadows Into Light", cursive;
+  color: black;
+  font-weight: normal;
+}
+
+.todayDescription {
+  margin: 0 auto;
+  text-align: center;
+  font-size: large;
+  font-family: "Shadows Into Light", cursive;
+  color: black;
+  font-weight: normal;
+  text-transform: capitalize;
+}
+
+.weather-icon {
+  align-items: center;
+  width: 60px;
+}
+
+.paremeters {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  font-size: large;
+  font-weight: normal;
+  font-family: "Shadows Into Light", cursive;
+  color: #7c99ac;
+  text-transform: capitalize;
+}
+
+.windspeed {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  font-size: large;
+  font-weight: normal;
+  font-family: "Shadows Into Light", cursive;
+  color: #7c99ac;
+}
+
+.weather-forecast {
+  margin: 0 auto;
+  text-align: center;
+  font-size: small;
+  font-family: "Shadows Into Light", cursive;
+}
+
+.weather-forecast-date {
+  font-size: 16px;
+  font-family: "Shadows Into Light", cursive;
+}
+
+h3 {
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+  color: grey;
+  font-family: "Shadows Into Light", cursive;
+  font-size: large;
+  font-weight: normal;
+}
+
+.weather-forecast-temperature-min {
+  font-size: 16px;
+  color: grey;
+  font-family: "Shadows Into Light", cursive;
+}
+.weather-forecast-temperatures {
+  font-size: 16px;
+  color: #237b9b;
+  font-family: "Shadows Into Light", cursive;
+}
+
+.images {
+  display: inline;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.codedby {
+  color: grey;
+  font-family: "Shadows Into Light", cursive;
+  font-size: large;
+  font-weight: normal;
+  text-align: center;
+}

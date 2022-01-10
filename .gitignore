@@ -1,0 +1,7 @@
+src/API_KEY.js
+node_modules/
+
+
+.env
+.env.local
+.env.*.local
