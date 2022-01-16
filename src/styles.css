@@ -18,10 +18,9 @@ h1 {
   text-align: center;
 }
 
-img {
-  display: block;
-  margin: 0 auto;
+.images {
   align-items: center;
+  margin: auto;
 }
 
 h2 {
@@ -62,6 +61,7 @@ p {
 .weather-icon {
   width: 60px;
   display: block;
+  align-items: center;
 }
 
 .paremeters {
@@ -149,31 +149,31 @@ p {
   align-items: center;
 }
 
-.highlow1 {
+.nexttemperature1 {
   text-align: center;
   color: black;
   font-weight: normal;
 }
 
-.highlow2 {
+.nexttemperature2 {
   text-align: center;
   color: black;
   font-weight: normal;
 }
 
-.highlow3 {
+.nexttemperature3 {
   text-align: center;
   color: black;
   font-weight: normal;
 }
 
-.highlow4 {
+.nexttemperature4 {
   text-align: center;
   color: black;
   font-weight: normal;
 }
 
-.highlow5 {
+.nexttemperature5 {
   text-align: center;
   color: black;
   font-weight: normal;
@@ -195,4 +195,9 @@ h3 {
   font-size: large;
   font-weight: normal;
   text-align: center;
+}
+
+.images {
+  align-items: center;
+  display: inline;
 }
