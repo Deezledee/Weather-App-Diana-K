@@ -59,9 +59,8 @@ p {
 }
 
 .weather-icon {
-  width: 60px;
-  display: block;
   align-items: center;
+  width: 60px;
 }
 
 .paremeters {
@@ -195,9 +194,4 @@ h3 {
   font-size: large;
   font-weight: normal;
   text-align: center;
-}
-
-.images {
-  align-items: center;
-  display: inline;
 }
