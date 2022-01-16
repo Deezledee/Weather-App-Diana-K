@@ -50,15 +50,28 @@ p {
   font-weight: normal;
 }
 
-.humidity {
+.todayDescription {
+  margin: 0 auto;
+  text-align: center;
+  font-size: large;
+  font-family: "Shadows Into Light", cursive;
+  color: black;
+  font-weight: normal;
+}
+
+.weather-icon {
+  width: 60px;
+  display: block;
+}
+
+.paremeters {
   display: block;
   margin: 0 auto;
   text-align: center;
   font-size: large;
-  font-weight: bold;
-  font-family: "Shadows Into Light", cursive;
-  color: black;
   font-weight: normal;
+  font-family: "Shadows Into Light", cursive;
+  color: #7c99ac;
 }
 
 .windspeed {
@@ -66,10 +79,9 @@ p {
   margin: 0 auto;
   text-align: center;
   font-size: large;
-  font-weight: bold;
-  font-family: "Shadows Into Light", cursive;
-  color: black;
   font-weight: normal;
+  font-family: "Shadows Into Light", cursive;
+  color: #7c99ac;
 }
 
 .fivedaysahead {
@@ -91,6 +103,13 @@ h3 {
   display: block;
   text-align: center;
   margin: 0 auto;
+  color: grey;
+  font-family: "Shadows Into Light", cursive;
+  font-size: large;
+  font-weight: normal;
+}
+
+.codedby {
   color: grey;
   font-family: "Shadows Into Light", cursive;
   font-size: large;
