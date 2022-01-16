@@ -91,28 +91,87 @@ p {
   font-family: "Shadows Into Light", cursive;
 }
 
+.day1 {
+  text-align: center;
+  color: black;
+  font-weight: normal;
+}
+.day2 {
+  text-align: center;
+  color: black;
+  font-weight: normal;
+}
+
+.day3 {
+  text-align: center;
+  color: black;
+  font-weight: normal;
+}
+
+.day4 {
+  text-align: center;
+  color: black;
+  font-weight: normal;
+}
+
+.day5 {
+  text-align: center;
+  color: black;
+  font-weight: normal;
+}
+
 .icon1 {
-  display: block;
   width: 100px;
+  align-items: center;
 }
 
 .icon2 {
-  display: block;
   width: 100px;
+  align-items: center;
 }
 .icon3 {
-  display: block;
   width: 100px;
+  align-items: center;
 }
 
 .icon4 {
-  display: block;
   width: 100px;
+  align-items: center;
 }
 
 .icon5 {
-  display: block;
   width: 100px;
+  align-items: center;
+}
+
+.highlow1 {
+  text-align: center;
+  color: black;
+  font-weight: normal;
+}
+
+.highlow2 {
+  text-align: center;
+  color: black;
+  font-weight: normal;
+}
+
+.highlow3 {
+  text-align: center;
+  color: black;
+  font-weight: normal;
+}
+
+.highlow4 {
+  text-align: center;
+  color: black;
+  font-weight: normal;
+}
+
+.highlow5 {
+  text-align: center;
+  color: black;
+  font-weight: normal;
 }
 
 h3 {
