@@ -97,6 +97,7 @@ p {
 .icon4,
 .icon5 {
   display: block;
+  width: 300px;
 }
 
 h3 {
@@ -114,4 +115,5 @@ h3 {
   font-family: "Shadows Into Light", cursive;
   font-size: large;
   font-weight: normal;
+  text-align: center;
 }
