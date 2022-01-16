@@ -50,11 +50,41 @@ p {
   font-weight: normal;
 }
 
+.humidity {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  font-size: large;
+  font-weight: bold;
+  font-family: "Shadows Into Light", cursive;
+  color: black;
+  font-weight: normal;
+}
+
+.windspeed {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  font-size: large;
+  font-weight: bold;
+  font-family: "Shadows Into Light", cursive;
+  color: black;
+  font-weight: normal;
+}
+
 .fivedaysahead {
   margin: 0 auto;
   text-align: center;
   font-size: small;
   font-family: "Shadows Into Light", cursive;
+}
+
+.icon1,
+.icon2,
+.icon3,
+.icon4,
+.icon5 {
+  display: block;
 }
 
 h3 {
