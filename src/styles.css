@@ -91,10 +91,25 @@ p {
   font-family: "Shadows Into Light", cursive;
 }
 
-.icon1,
-.icon2,
-.icon3,
-.icon4,
+.icon1 {
+  display: block;
+  width: 60px;
+}
+
+.icon2 {
+  display: block;
+  width: 60px;
+}
+.icon3 {
+  display: block;
+  width: 60px;
+}
+
+.icon4 {
+  display: block;
+  width: 60px;
+}
+
 .icon5 {
   display: block;
   width: 60px;
