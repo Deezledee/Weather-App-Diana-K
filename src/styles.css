@@ -50,13 +50,11 @@ p {
   font-weight: normal;
 }
 
-.row {
+.fivedaysahead {
   margin: 0 auto;
   text-align: center;
+  font-size: small;
   font-family: "Shadows Into Light", cursive;
-  color: grey;
-  font-size: large;
-  font-weight: normal;
 }
 
 h3 {
