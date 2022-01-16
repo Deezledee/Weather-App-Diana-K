@@ -188,14 +188,15 @@ h3 {
   font-weight: normal;
 }
 
+.images {
+  display: inline;
+  align-items: center;
+}
+
 .codedby {
   color: grey;
   font-family: "Shadows Into Light", cursive;
   font-size: large;
   font-weight: normal;
   text-align: center;
-}
-
-.images {
-  display: inline;
 }
