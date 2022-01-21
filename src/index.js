@@ -70,6 +70,11 @@ fahrenheitButton.addEventListener("click", temperatureInFahrenheit);
 //Geolocation function - search city
 
 function showTemperature(response) {
+  let currentTemp = document.querySelector("#temperature");
+  currentTemp.innerHTML = `${Math.round(response.data.main.temp)}°C`;
+  let description = document.querySelector("#today_description");
+  description.innerHTML = response.data.weather[0].description;
+
   document.querySelector("h2").innerHTML = `Today in ${response.data.name}`;
   document.querySelector("#temperature").innerHTML = Math.round(
     response.data.main.temp
