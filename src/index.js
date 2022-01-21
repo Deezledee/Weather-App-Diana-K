@@ -76,7 +76,8 @@ function showTemperature(response) {
   let description = document.querySelector("#today_description");
   description.innerHTML = response.data.weather[0].description;
   iconElement.setAttribute =
-    ("src", `http://openweathermap.org/img/wn/01d@2x.png`);
+    ("src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
   document.querySelector("h2").innerHTML = `Today in ${response.data.name}`;
   document.querySelector("#temperature").innerHTML = Math.round(
     response.data.main.temp
