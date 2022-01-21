@@ -72,9 +72,15 @@ fahrenheitButton.addEventListener("click", temperatureInFahrenheit);
 function showTemperature(response) {
   let iconElement = document.querySelector("#main-icon");
   let currentTemp = document.querySelector("#temperature");
+  let humidityElement = document.querySelector("#humidity_number");
+  let windElement = document.querySelector("#windspeed_number");
+  let datelement = document.querySelector("#date");
   currentTemp.innerHTML = `${Math.round(response.data.main.temp)}°C`;
-  let description = document.querySelector("#today_description");
-  description.innerHTML = response.data.weather[0].description;
+  let descriptionElement = document.querySelector("#today_description");
+  descriptionElement.innerHTML = response.data.weather[0].description;
+  humidityElement.innerHTML = response.data.main.humidity;
+  datelement.innerHTML = todayFormatDate(response.data.dt * 1000);
+  windElement.innerHTML = Math.round(response.data.wind.speed);
   iconElement.setAttribute =
     ("src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
