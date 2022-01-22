@@ -1,138 +1,219 @@
 <!DOCTYPE html>
 <html>
   <head>
-      <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-      <script src="https://kit.fontawesome.com/ce300b9666.js" crossorigin="anonymous"></script>
-      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-      <meta charset="UTF-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <meta name="viewport" content="width=, initial-scale=1.0">
-      <link rel="preconnect" href="https://fonts.googleapis.com">
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-      <link href="https://fonts.googleapis.com/css2?family=PT+Mono&family=Pacifico&family=Shadows+Into+Light&display=swap" rel="stylesheet">
-      <link rel="stylesheet" href="src/styles.css">
-      <title>Document</title>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/ce300b9666.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=PT+Mono&family=Pacifico&family=Shadows+Into+Light&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="src/styles.css" />
+    <title>Document</title>
   </head>
 
   <body>
-      <div class="container">
-        
-    <h1>Weather Forecast 🌡️</h1>
+    <div class="container">
+      <h1>Weather Forecast 🌡️</h1>
 
       <br />
-      <form id="search-form"> 
-      <input id="city-input" type="text" class="form-control" placeholder="Enter a city name" autocomplete="on">
-      <input type="submit" value="Search 🔍" class="form-control" /> <br />
-      <button class="btn btn-success" id="currentLocation1">
-        Current location 📍
+      <form id="search-form">
+        <input
+          id="city-input"
+          type="text"
+          class="form-control"
+          placeholder="Enter a city name"
+          autocomplete="on"
+        />
+        <input type="submit" value="Search 🔍" class="form-control" /> <br />
+        <button class="btn btn-success" id="currentLocation1">
+          Current location 📍
         </button>
       </form>
       <br />
 
-      <h2 id="today2">Today in Berlin </h2>
+      <h2 id="today2">Today in Berlin</h2>
       <br />
       <p>
-          <span id ="temperature" class="today-temperature">19</span>
-      <span class="units"> <a href="#" id="celsius">°C</a> |<a href="#" id="fahrenheit">°F</a></span> </>
+        <span id="temperature" class="today-temperature">19</span>
+        <span class="units">
+          <a href="#" id="celsius">°C</a> |<a href="#" id="fahrenheit"
+            >°F</a
+          ></span
+        >
+        <br />
+      </p>
+
+      <div class="todayDescription">
+        <span id="today_description">Slight Rain</span>
+        <img
+          src="http://openweathermap.org/img/wn/10d@2x.png"
+          alt="clear sky"
+          id="main-icon"
+          class="float-right"
+          width="50px"
+        />
+      </div>
       <br />
-      <div id="today_description" class="todayDescription">Slight Rain 
-        <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="clear sky" id="main-icon" class="float-right" width="50px">
-        <br />
-        <br />
-            <div class="row paremeters">
-              <div class="col humidity">
-                Humidity: <span id="humidity_number">52</span>%
-              </div>
-              <div class="col windspeed">
-                  Windspeed:
-                  <span id="windspeed_number">23</span> m/s
-                </div>
-              </div>
-              <br />
-        <h3 id ="date" class="date">Thursday 30/12/2021 22:30</h3>
-        <br />
-        <br />
-        <br />
-  <div class="row fivedaysahead">
-      <div class="col">
-        <span class="day1" id="day1">Monday</span>
-        <div class="col">
-          <img
-            class="icon1"
-            src="http://openweathermap.org/img/wn/10d@2x.png"
-            alt="weather icon"
-          />
+      <div class="row paremeters">
+        <div class="col humidity">
+          Humidity: <span id="humidity_number">52</span>%
         </div>
-        <div> <span id ="temperature1" class="nexttemperature1">19</span>
-          <span class="units1"> <a href="#" id="celsius1">°C</a> |<a href="#" id="fahrenheit1">°F</a></span></div>
+        <div class="col windspeed">
+          Windspeed:
+          <span id="windspeed_number">23</span> m/s
+        </div>
       </div>
+      <br />
+      <h3 id="date" class="date">Thursday 30/12/2021 22:30</h3>
+      <br />
+      <br />
+      <br />
+      <div class="row fivedaysahead">
+        <div class="col">
+          <span class="day1" id="day1">Monday</span>
+          <div class="col">
+            <img
+              class="icon1"
+              src="http://openweathermap.org/img/wn/10d@2x.png"
+              alt="weather icon"
+            />
+          </div>
+          <div>
+            <span id="temperature1" class="nexttemperature1">19</span>
+            <span class="units1">
+              <a href="#" id="celsius1">°C</a> |<a href="#" id="fahrenheit1"
+                >°F</a
+              ></span
+            >
+          </div>
+        </div>
 
-      <div class="col">
-        <span class="day2" id="day2">Tuesday</span>
         <div class="col">
-          <img
-            class="icon2"
-            src="http://openweathermap.org/img/wn/10d@2x.png"
-            alt="weather icon"
-          />
+          <span class="day2" id="day2">Tuesday</span>
+          <div class="col">
+            <img
+              class="icon2"
+              src="http://openweathermap.org/img/wn/10d@2x.png"
+              alt="weather icon"
+            />
+          </div>
+          <div>
+            <span id="temperature2" class="nexttemperature2">19</span>
+            <span class="units2">
+              <a href="#" id="celsius2">°C</a> |<a href="#" id="fahrenheit2"
+                >°F</a
+              ></span
+            >
+          </div>
         </div>
-        <div> <span id ="temperature2" class="nexttemperature2">19</span>
-          <span class="units2"> <a href="#" id="celsius2">°C</a> |<a href="#" id="fahrenheit2">°F</a></span></div>
-      </div>
-      <div class="col">
-        <span class="day3" id="day3">Wednesday</span>
         <div class="col">
-          <img
-            class="icon3"
-            src="http://openweathermap.org/img/wn/10d@2x.png"
-            alt="weather icon"
-          />
+          <span class="day3" id="day3">Wednesday</span>
+          <div class="col">
+            <img
+              class="icon3"
+              src="http://openweathermap.org/img/wn/10d@2x.png"
+              alt="weather icon"
+            />
+          </div>
+          <div>
+            <span id="temperature3" class="nexttemperature3">19</span>
+            <span class="units3">
+              <a href="#" id="celsius3">°C</a> |<a href="#" id="fahrenheit3"
+                >°F</a
+              ></span
+            >
+          </div>
         </div>
-        <div> <span id ="temperature3" class="nexttemperature3">19</span>
-          <span class="units3"> <a href="#" id="celsius3">°C</a> |<a href="#" id="fahrenheit3">°F</a></span></div>
-      </div>
-      <div class="col">
-        <span class="day4" id="day4">Thursday</span>
         <div class="col">
-          <img
-            class="icon4"
-            src="http://openweathermap.org/img/wn/10d@2x.png"
-            alt="weather icon"
-          />
+          <span class="day4" id="day4">Thursday</span>
+          <div class="col">
+            <img
+              class="icon4"
+              src="http://openweathermap.org/img/wn/10d@2x.png"
+              alt="weather icon"
+            />
+          </div>
+          <div>
+            <span id="temperature4" class="nexttemperature4">19</span>
+            <span class="units4">
+              <a href="#" id="celsius4">°C</a> |<a href="#" id="fahrenheit4"
+                >°F</a
+              ></span
+            >
+          </div>
         </div>
-        <div> <span id ="temperature4" class="nexttemperature4">19</span>
-          <span class="units4"> <a href="#" id="celsius4">°C</a> |<a href="#" id="fahrenheit4">°F</a></span></div>
-      </div>
-      <div class="col">
-        <span class="day5" id="day5">Friday</span>
         <div class="col">
-          <img
-            class="icon5"
-            src="http://openweathermap.org/img/wn/10d@2x.png"
-            alt="weather icon"
-          />
+          <span class="day5" id="day5">Friday</span>
+          <div class="col">
+            <img
+              class="icon5"
+              src="http://openweathermap.org/img/wn/10d@2x.png"
+              alt="weather icon"
+            />
+          </div>
+          <div>
+            <span id="temperature5" class="nexttemperature5">19</span>
+            <span class="units5">
+              <a href="#" id="celsius5">°C</a> |<a href="#" id="fahrenheit5"
+                >°F</a
+              ></span
+            >
+          </div>
         </div>
-        <div> <span id ="temperature5" class="nexttemperature5">19</span>
-          <span class="units5"> <a href="#" id="celsius5">°C</a> |<a href="#" id="fahrenheit5">°F</a></span></div>
       </div>
+      <br />
+
+      <div class="images">
+        <img
+          class="redflowers"
+          src="src/redflowers.jpg"
+          alt="redflowers"
+          width="400"
+        />
+        <img class="ladybug" src="src/ladybug.jpg" alt="ladybug" width="400" />
+        <img class="grass" src="src/grass.jpg" alt="grass" width="400" />
+      </div>
+      <br />
+      <br />
+
+      <footer class="codedby">
+        Coded by
+        <a
+          href="https://www.shecodes.io/students/503-diana-kalstein"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Diana Kalstein ©️</a
+        >, is
+        <a
+          href="https://github.com/Deezledee/Weather-App-Diana-K.git"
+          target="_blank"
+          rel="noopener noreferrer"
+          >open-sourced on GitHub</a
+        >
+        and is
+        <a
+          href="https://adoring-kowalevski-9714eb.netlify.app"
+          target="_blank"
+          rel="noopener noreferrer"
+          >hosted on Netlify</a
+        >
+      </footer>
+
+      <script src="src/index.js"></script>
     </div>
-  </div>
-</br>
-
-
-
-<div class="images">
-   <img class="redflowers" src="src/redflowers.jpg" alt="redflowers" width=400>
-   <img class="ladybug" src="src/ladybug.jpg" alt="ladybug" width=400>
-   <img class="grass" src="src/grass.jpg" alt="grass" width=400>
-</div>
-<br />
-<br />
-
-<footer class="codedby">Coded by <a href="https://www.shecodes.io/students/503-diana-kalstein" target="_blank" rel="noopener noreferrer">Diana Kalstein ©️</a>, is <a href="https://github.com/Deezledee/Weather-App-Diana-K.git" target="_blank" rel="noopener noreferrer">open-sourced on GitHub</a> and is <a href="https://adoring-kowalevski-9714eb.netlify.app" target="_blank" rel="noopener noreferrer">hosted on Netlify</a></footer>
-
-    <script src="src/index.js"></script>
-  </div>
-</body>
-
+  </body>
 </html>

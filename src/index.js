@@ -1,5 +1,6 @@
 // Feature #1
-function todayFormatDate(date) {
+function todayFormatDate(timestamp) {
+  let date = new Date(timestamp);
   let currentHour = date.getHours();
   if (currentHour < 10) {
     currentHour = `0${currentHour}`;
