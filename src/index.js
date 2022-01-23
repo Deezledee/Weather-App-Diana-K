@@ -82,10 +82,11 @@ function showTemperature(response) {
   humidityElement.innerHTML = response.data.main.humidity;
   datelement.innerHTML = todayFormatDate(response.data.dt * 1000);
   windElement.innerHTML = Math.round(response.data.wind.speed);
-  iconElement.setAttribute =
-    ("src",
-    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
-  iconElement.setAttribute = ("alt", response.data.weather[0].description);
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  iconElement.setAttribute("alt", response.data.weather[0].description);
   document.querySelector("h2").innerHTML = `Today in ${response.data.name}`;
   document.querySelector("#temperature").innerHTML = Math.round(
     response.data.main.temp
