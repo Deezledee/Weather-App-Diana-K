@@ -54,19 +54,6 @@ let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", searchCity);
 
 // Bonus - Feature 3
-function temperatureInCelsius() {
-  let temperatureCelsius = document.querySelector(".today-temperature");
-  temperatureCelsius.innerHTML = `5`;
-}
-let celsiusButton = document.querySelector("#celsius");
-celsiusButton.addEventListener("click", temperatureInCelsius);
-
-function temperatureInFahrenheit() {
-  let temperatureFahrenheit = document.querySelector(".today-temperature");
-  temperatureFahrenheit.innerHTML = `41`;
-}
-let fahrenheitButton = document.querySelector("#fahrenheit");
-fahrenheitButton.addEventListener("click", temperatureInFahrenheit);
 
 //Geolocation function - search city
 
@@ -101,7 +88,6 @@ function searchCities(cities) {
 }
 
 function search(event) {
-  event.preventDefault();
   let cities = document.querySelector("#city-input").value;
   searchCities(cities);
 }
@@ -119,6 +105,44 @@ function getCurrentLocation(event) {
   navigator.geolocation.getCurrentPosition(searchLocation);
 }
 
+//celcius to fahrenheit
+
+function handleSubmit(event) {
+  event.preventDefault();
+  let cityInputElement = document.querySelector("#city-input");
+  search(cityInputElement.value);
+}
+
+function displayFahrenheitTemperature(event) {
+  event.preventDefault();
+  let currentTemp = document.querySelector("temperature");
+  celsiusLink.classList.remove("active");
+  fahrenheitLink.classList.add("active");
+  let fahrenheitTemperature = (celciusTemperature * 9) / 5 + 32;
+  currentTemp.innerHTML = Math.round(fahrenheitTemperature);
+}
+function displayCelsiusTemperature(event) {
+  event.preventDefault();
+  celsiusLink.classList.add("active");
+  fahrenheitLink.classList.remove("active");
+  let currentTemp = document.querySelector("temperature");
+  currentTemp.innerHTML = Math.round(celciusTemperature);
+}
+
+let celciusTemperature = null;
+
+let form = document.querySelector("#search-form");
+form.addEventListener("submit", handleSubmit);
+
+let fahrenheitLink = document.querySelector("#fahrenheit");
+fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
+
+let celsiusLink = document.querySelector("#celsius");
+celsiusLink.addEventListener("click", displayCelsiusTemperature);
+
+// Default search
+search("Tokyo");
+
 function searchLocation(position) {
   let apiKey = "19d4e3e019b6af8cf23d09f85fc85a54";
   let lon = position.coords.longitude;
@@ -127,5 +151,3 @@ function searchLocation(position) {
 
   axios.get(apiUrl).then(showTemperature);
 }
-
-//API sync
