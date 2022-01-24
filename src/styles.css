@@ -101,10 +101,29 @@ p {
   color: #7c99ac;
 }
 
-.fivedaysahead {
+.weather-forecast {
   margin: 0 auto;
   text-align: center;
   font-size: small;
+  font-family: "Shadows Into Light", cursive;
+}
+
+.weather-forecast-date {
+  font-size: 16px;
+  background-color: black;
+  opacity: 0.5;
+  font-family: "Shadows Into Light", cursive;
+}
+
+.weather-forecast-temperature-min {
+  font-size: 16px;
+  background-color: black;
+  opacity: 0.5;
+  font-family: "Shadows Into Light", cursive;
+}
+.weather-forecast-temperatures {
+  font-size: 16px;
+  background-color: #237b9b;
   font-family: "Shadows Into Light", cursive;
 }
 
