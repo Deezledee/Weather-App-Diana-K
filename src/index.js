@@ -73,6 +73,7 @@ function showTemperature(response) {
     "src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
+  celciusTemperature = response.data.main.temp;
   iconElement.setAttribute("alt", response.data.weather[0].description);
   document.querySelector("h2").innerHTML = `Today in ${response.data.name}`;
   document.querySelector("#temperature").innerHTML = Math.round(
@@ -115,7 +116,7 @@ function handleSubmit(event) {
 
 function displayFahrenheitTemperature(event) {
   event.preventDefault();
-  let currentTemp = document.querySelector("temperature");
+  let currentTemp = document.querySelector("#temperature");
   celsiusLink.classList.remove("active");
   fahrenheitLink.classList.add("active");
   let fahrenheitTemperature = (celciusTemperature * 9) / 5 + 32;
@@ -125,7 +126,7 @@ function displayCelsiusTemperature(event) {
   event.preventDefault();
   celsiusLink.classList.add("active");
   fahrenheitLink.classList.remove("active");
-  let currentTemp = document.querySelector("temperature");
+  let currentTemp = document.querySelector("#temperature");
   currentTemp.innerHTML = Math.round(celciusTemperature);
 }
 
