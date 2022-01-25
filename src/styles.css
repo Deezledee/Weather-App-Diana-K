@@ -127,94 +127,6 @@ p {
   font-family: "Shadows Into Light", cursive;
 }
 
-.day1 {
-  text-align: center;
-  color: black;
-  font-weight: normal;
-  font-size: medium;
-}
-.day2 {
-  text-align: center;
-  color: black;
-  font-weight: normal;
-  font-size: medium;
-}
-
-.day3 {
-  text-align: center;
-  color: black;
-  font-weight: normal;
-  font-size: medium;
-}
-
-.day4 {
-  text-align: center;
-  color: black;
-  font-weight: normal;
-  font-size: medium;
-}
-
-.day5 {
-  text-align: center;
-  color: black;
-  font-weight: normal;
-  font-size: medium;
-}
-
-.icon1 {
-  width: 100px;
-  align-items: center;
-}
-
-.icon2 {
-  width: 100px;
-  align-items: center;
-}
-.icon3 {
-  width: 100px;
-  align-items: center;
-}
-
-.icon4 {
-  width: 100px;
-  align-items: center;
-}
-
-.icon5 {
-  width: 100px;
-  align-items: center;
-}
-
-.nexttemperature1 {
-  text-align: center;
-  color: black;
-  font-weight: normal;
-}
-
-.nexttemperature2 {
-  text-align: center;
-  color: black;
-  font-weight: normal;
-}
-
-.nexttemperature3 {
-  text-align: center;
-  color: black;
-  font-weight: normal;
-}
-
-.nexttemperature4 {
-  text-align: center;
-  color: black;
-  font-weight: normal;
-}
-
-.nexttemperature5 {
-  text-align: center;
-  color: black;
-  font-weight: normal;
-}
-
 h3 {
   display: block;
   text-align: center;
@@ -228,6 +140,7 @@ h3 {
 .images {
   display: inline;
   align-items: center;
+  margin: 0 auto;
 }
 
 .codedby {
