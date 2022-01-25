@@ -173,8 +173,6 @@ function displayCelsiusTemperature(event) {
 
 let celciusTemperature = null;
 
-displayForecast();
-
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
 
@@ -185,7 +183,7 @@ let celsiusLink = document.querySelector("#celsius");
 celsiusLink.addEventListener("click", displayCelsiusTemperature);
 
 // Default search
-search("Tokyo");
+searchCities("Tokyo");
 
 function searchLocation(position) {
   let apiKey = "19d4e3e019b6af8cf23d09f85fc85a54";
