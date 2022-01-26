@@ -115,18 +115,6 @@ p {
   font-family: "Shadows Into Light", cursive;
 }
 
-.weather-forecast-temperature-min {
-  font-size: 16px;
-  background-color: black;
-  opacity: 0.5;
-  font-family: "Shadows Into Light", cursive;
-}
-.weather-forecast-temperatures {
-  font-size: 16px;
-  background-color: #237b9b;
-  font-family: "Shadows Into Light", cursive;
-}
-
 h3 {
   display: block;
   text-align: center;
@@ -135,6 +123,18 @@ h3 {
   font-family: "Shadows Into Light", cursive;
   font-size: large;
   font-weight: normal;
+}
+
+.weather-forecast-temperature-min {
+  font-size: 16px;
+  color: grey;
+  opacity: 0.5;
+  font-family: "Shadows Into Light", cursive;
+}
+.weather-forecast-temperatures {
+  font-size: 16px;
+  color: #237b9b;
+  font-family: "Shadows Into Light", cursive;
 }
 
 .images {

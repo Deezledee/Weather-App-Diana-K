@@ -42,6 +42,13 @@ let now = new Date();
 let h3 = document.querySelector(".date");
 h3.innerHTML = `${todayFormatDate(now)}`;
 
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let day = date.getDay();
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+
+  return days[day];
+}
 // Feature #2
 
 function searchCity(event) {
@@ -58,28 +65,37 @@ searchForm.addEventListener("submit", searchCity);
 //Geolocation function - search city
 
 function displayForecast(response) {
-  console.log(response.data.daily);
+  let forecast = response.data.daily;
   let forecastElement = document.querySelector("#forecast");
 
   let forecastHTML = `<div class="row">`;
-  let days = ["Thu", "Fri", "Sat", "Sun"];
-  days.forEach(function (day) {
-    forecastHTML =
-      forecastHTML +
-      `<div class="col-2">
-      <div class="weather-forecast-date">${day}</div>
+
+  forecast.forEach(function (forecastDay, index) {
+    if (index < 6) {
+      forecastHTML =
+        forecastHTML +
+        `<div class="col-2">
+      <div class="weather-forecast-date">${formatDay(forecastDay.dt)}</div>
+      ${index}
       <img
-        src="http://openweathermap.org/img/wn/50d@2x.png"
+        src="http://openweathermap.org/img/wn/${
+          forecastDay.weather[0].icon
+        }@2x.png"
         alt=""
         width="40"
       />
       <div class="weather-forecast-temperatures">
-        <span class="weather-forecast-temperature-max"> 18° </span>
-        <span class="weather-forecast-temperature-min"> 12° </span>
+        <span class="weather-forecast-temperature-max"> ${Math.round(
+          forecastDay.temp.max
+        )}° </span>
+        <span class="weather-forecast-temperature-min"> ${Math.round(
+          forecastDay.temp.min
+        )}° </span>
       </div>
     </div>
     
     `;
+    }
   });
 
   forecastHTML = forecastHTML + `</div>`;
@@ -109,7 +125,7 @@ function showTemperature(response) {
   windElement.innerHTML = Math.round(response.data.wind.speed);
   iconElement.setAttribute(
     "src",
-    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+    `http://openweathermap.org/img/wn/${response.data.weather[0].mainicon}@2x.png`
   );
   celciusTemperature = response.data.main.temp;
   iconElement.setAttribute("alt", response.data.weather[0].description);
