@@ -1,5 +1,11 @@
 body {
   background-color: #f0ece3;
+  margin: 0;
+}
+
+.container {
+  width: min(960px, 100% - 2rem);
+  margin: 2rem auto;
 }
 
 h1 {
@@ -12,7 +18,8 @@ h1 {
 }
 
 .form-control {
-  max-width: 300px;
+  max-width: 420px;
+  width: 100%;
   display: block;
   margin: auto;
   text-align: center;
@@ -35,8 +42,11 @@ h1 {
 }
 
 .images {
-  align-items: center;
-  margin: auto;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin: 0 auto;
 }
 
 h2 {
@@ -81,7 +91,6 @@ p {
 }
 
 .paremeters {
-  display: block;
   margin: 0 auto;
   text-align: center;
   font-size: large;
@@ -106,6 +115,14 @@ p {
   text-align: center;
   font-size: small;
   font-family: "Shadows Into Light", cursive;
+}
+
+.weather-forecast .row {
+  row-gap: 0.75rem;
+}
+
+.weather-forecast .col-2 {
+  min-width: 90px;
 }
 
 .weather-forecast-date {
@@ -134,10 +151,10 @@ h3 {
   font-family: "Shadows Into Light", cursive;
 }
 
-.images {
-  display: inline;
-  align-items: center;
-  margin: 0 auto;
+.images img {
+  width: min(100%, 320px);
+  height: auto;
+  border-radius: 8px;
 }
 
 .codedby {
@@ -146,4 +163,47 @@ h3 {
   font-size: large;
   font-weight: normal;
   text-align: center;
+  padding: 0 0.5rem 1rem;
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: min(100% - 1rem, 680px);
+    margin: 1rem auto;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+  }
+
+  p,
+  .todayDescription,
+  .paremeters,
+  .windspeed,
+  h3,
+  .codedby {
+    font-size: 1.05rem;
+  }
+
+  .weather-forecast .col-2 {
+    flex: 0 0 33.333333%;
+    max-width: 33.333333%;
+    min-width: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .weather-forecast .col-2 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+
+  .btn-success {
+    width: 100%;
+    max-width: 420px;
+  }
 }
